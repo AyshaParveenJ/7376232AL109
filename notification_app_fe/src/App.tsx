@@ -1,19 +1,7 @@
-function App() {
-  return (
-    <div
-      style={{
-        padding: "20px",
-        fontFamily: "Arial",
-      }}
-    >
-      <h1>Campus Notifications</h1>
+import Home from "./pages/Home";
 
-      <p>
-        Frontend setup completed
-        successfully.
-      </p>
-    </div>
-  );
+function App() {
+  return <Home />;
 }
 
 export default App;

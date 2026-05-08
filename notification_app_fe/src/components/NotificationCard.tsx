@@ -4,34 +4,24 @@ import {
   Typography,
 } from "@mui/material";
 
-type Props = {
-  title: string;
-  type: string;
-  time: string;
-};
-
-const NotificationCard = ({
-  title,
-  type,
-  time,
-}: Props) => {
+export default function NotificationCard({
+  notification,
+}: any) {
   return (
     <Card sx={{ mb: 2 }}>
       <CardContent>
         <Typography variant="h6">
-          {title}
+          {notification.Message}
         </Typography>
 
         <Typography>
-          Type: {type}
+          Type: {notification.Type}
         </Typography>
 
         <Typography>
-          {time}
+          {notification.Timestamp}
         </Typography>
       </CardContent>
     </Card>
   );
-};
-
-export default NotificationCard;
+}
