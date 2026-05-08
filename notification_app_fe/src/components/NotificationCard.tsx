@@ -11,14 +11,14 @@ export default function NotificationCard({
     <Card sx={{ mb: 2 }}>
       <CardContent>
         <Typography variant="h6">
+          {notification.Type}
+        </Typography>
+
+        <Typography>
           {notification.Message}
         </Typography>
 
-        <Typography>
-          Type: {notification.Type}
-        </Typography>
-
-        <Typography>
+        <Typography variant="body2">
           {notification.Timestamp}
         </Typography>
       </CardContent>

@@ -3,20 +3,18 @@ import axios from "axios";
 const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJheXNoYXBhcnZlZW4uakBnbWFpbC5jb20iLCJleHAiOjE3NzgyMzc4OTEsImlhdCI6MTc3ODIzNjk5MSwiaXNzIjoiQWZmb3JkIE1lZGljYWwgVGVjaG5vbG9naWVzIFByaXZhdGUgTGltaXRlZCIsImp0aSI6ImMyNTM4ZDhlLTc2NTgtNDYwMC05MDZkLTE3MWFmZDJjN2U4MSIsImxvY2FsZSI6ImVuLUlOIiwibmFtZSI6ImF5c2hhIHBhcnZlZW4gaiIsInN1YiI6IjAxYmE3ZDFjLTFiMjEtNGM2OS1hNmZkLWNmNzFjOGY2NWNmYSJ9LCJlbWFpbCI6ImF5c2hhcGFydmVlbi5qQGdtYWlsLmNvbSIsIm5hbWUiOiJheXNoYSBwYXJ2ZWVuIGoiLCJyb2xsTm8iOiI3Mzc2MjMyYWwxMDkiLCJhY2Nlc3NDb2RlIjoidUthSmZtIiwiY2xpZW50SUQiOiIwMWJhN2QxYy0xYjIxLTRjNjktYTZmZC1jZjcxYzhmNjVjZmEiLCJjbGllbnRTZWNyZXQiOiJOc3pOVFRQUnh4SEFqcEhZIn0.s_AlfVKK9_mIwuGxECVl5-jKL11fn0XSvsTCUPiG18s";
 
 const API = axios.create({
-  baseURL: "http://4.224.186.213/evaluation-service",
+  baseURL:
+    "http://4.224.186.213/evaluation-service",
   headers: {
     Authorization: `Bearer ${TOKEN}`,
   },
 });
 
-export const getNotifications = async () => {
-  try {
-    const response = await API.get("/notifications");
+export const getNotifications =
+  async () => {
+    const response = await API.get(
+      "/notifications"
+    );
 
-    return response.data.notifications || [];
-  } catch (error) {
-    console.log(error);
-
-    return [];
-  }
-};
+    return response.data.notifications;
+  };
