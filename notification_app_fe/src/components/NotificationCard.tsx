@@ -4,11 +4,11 @@ import {
   Typography,
 } from "@mui/material";
 
-interface Props {
+type Props = {
   title: string;
   type: string;
   time: string;
-}
+};
 
 const NotificationCard = ({
   title,
